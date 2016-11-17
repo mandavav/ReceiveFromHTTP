@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1461959286307
+Build-Jdk: 1.7.0_79
+Built-By: ubuntu
+Bundle-Description: ecm_receiveFromHTTP
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.html
+Bundle-ManifestVersion: 2
+Bundle-Name: ecm_receiveFromHTTP
+Bundle-SymbolicName: com.mycompany.ecm_receiveFromHTTP
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.apache.activemq,org.apache.activemq.camel.component,
+ org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Tool: Bnd-1.50.0
