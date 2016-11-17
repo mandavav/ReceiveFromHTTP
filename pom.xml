@@ -103,7 +103,7 @@
   </dependencies>
 
     <build>
-    <finalName>shared</finalName>
+    <finalName>http</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.felix</groupId>
