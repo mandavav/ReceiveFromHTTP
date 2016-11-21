@@ -21,5 +21,6 @@ node{
 	stage 'Deploy'
 		sh 'cp target/*.jar /var/lib/jenkins/workspace/Deploy/'
 		build job: 'Deploy'
-		
+
+	
 }
