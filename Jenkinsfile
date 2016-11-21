@@ -1,25 +1,22 @@
 
 node{
 	stage 'Checkout'
-		echo 'Cloning Repo!'
+		echo '------------------------- Cloning Repo! -------------------------'
 		checkout scm
 	
 	stage 'Build'
 		echo 'Testing'
 		env.PATH = "${tool 'M3'}/bin:${env.PATH}"
-		echo '111111111111111111111'
-		sh 'pwd'
-		sh 'ls'
+		echo '------------------------- Removing target directory -------------------------'
 		sh 'mvn clean'
-		echo '--------------------No TARGET -----------------------------------'
-		sh 'ls'
+		sh '------------------------- Maven Build -------------------------'
 		sh 'mvn clean install'
-		echo '--------------------Yes TARGET -----------------------------------'
-		sh 'ls'
-		sh ('cd target && ls')
 	
 	stage 'Deploy'
+		echo '------------------------- Copying jar file to Deploy Workspace -------------------------'
 		sh 'cp target/*.jar /var/lib/jenkins/workspace/Deploy/'
+		echo '------------------------- Calling the Deploy Jenkins Job -------------------------'
 		build job: 'Deploy'
+	
 
 }
