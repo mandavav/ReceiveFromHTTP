@@ -9,7 +9,7 @@ node{
 		env.PATH = "${tool 'M3'}/bin:${env.PATH}"
 		echo '------------------------- Removing target directory -------------------------'
 		sh 'mvn clean'
-		sh '------------------------- Maven Build -------------------------'
+		echo '------------------------- Maven Build -------------------------'
 		sh 'mvn clean install'
 	
 	stage 'Deploy'
